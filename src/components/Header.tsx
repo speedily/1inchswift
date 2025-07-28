@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import Logo from './Logo'
 
 const Header: React.FC = () => {
   const { address, isConnected } = useAccount()
@@ -12,8 +13,8 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <Link to="/" className="text-2xl font-bold text-blue-600">
-              1inchSwift
+            <Link to="/" className="flex items-center">
+              <Logo size="medium" showText={true} />
             </Link>
             <nav className="hidden md:flex space-x-6">
               <Link to="/" className="text-gray-700 hover:text-blue-600">
